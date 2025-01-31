@@ -6,20 +6,43 @@
     <title>Page</title>
 	
 	<script>
-	  window.pixelId = "6787357963a55783f1c08301";
-	  var a = document.createElement("script");
-	  a.setAttribute("async", "");
-	  a.setAttribute("defer", "");
-	  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
-	  document.head.appendChild(a);
+	    window.clickmagick_cmc = {
+	        uid: '204930',
+	        hid: '1651088255',
+	        cmc_project: 'CB-NP',
+	        cmc_goal: 'a',
+	        vid_info: 'on',
+	        cmc_ref: 'VSL',
+	    }
 	</script>
-
-	<script
-	  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
-	  data-utmify-prevent-subids
-	  async
-	  defer
-	></script>
+	<script src='//cdn.clkmc.com/cmc.js'></script>
+	
+	<script>
+	function eventoEngajamento(event) {
+	    console.log("Evento de Engajamento Inicializado...");
+	    event.preventDefault();
+	    var urlDestino = event.currentTarget.href;
+	    console.log("Evento Disparado com Sucesso!");
+	    var script = document.createElement("script");
+	    script.innerHTML = "window.clickmagick_cmc = { uid: '204930', hid: '1651088255', cmc_goal: 'e', vid_info: 'on', cmc_ref: 'ic-click', }";
+	    document.head.appendChild(script);
+	    var script = document.createElement('script');
+	    script.src = "//cdn.clkmc.com/cmc.js";
+	    document.head.appendChild(script);
+	    setTimeout(function() {
+	        console.log("Processamento de Evento de IC Realizado com Sucesso! Redirecionando...");
+	        window.location.href = urlDestino;
+	    }, 2000);
+	}
+	
+	var searchString = "https://hop.clickbank.net/?affiliate=victormac&vendor=nervefr&pg=dtc";
+	var links = document.querySelectorAll('a');
+	for (var i = 0; i < links.length; i++) {
+	    if (links[i].href.includes(searchString)) {
+	        links[i].addEventListener("click", eventoEngajamento);
+	    }
+	}
+	</script>
 	
 	<link rel="preload" href="https://scripts.converteai.net/7ee76c7b-b701-481f-b973-2b478faae041/players/678868d16c80ebda552c37b7/player.js" as="script">
 	<link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer/v1/smartplayer.min.js" as="script">
