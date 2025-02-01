@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page</title>
+	
+	<script>
+	    window.clickmagick_cmc = {
+	        uid: '204930',
+	        hid: '1651088255',
+	        cmc_project: 'CB-NP',
+	        cmc_goal: 'a',
+	        vid_info: 'on',
+	        cmc_ref: 'VSL',
+	    }
+	</script>
+	<script src='//cdn.clkmc.com/cmc.js'></script>
+	
+	<link rel="preload" href="https://scripts.converteai.net/7ee76c7b-b701-481f-b973-2b478faae041/players/679a8633f1845b49a0cacc1c/player.js" as="script">
+	<link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer/v1/smartplayer.min.js" as="script">
+	<link rel="preload" href="https://images.converteai.net/7ee76c7b-b701-481f-b973-2b478faae041/players/679a8633f1845b49a0cacc1c/thumbnail.jpg" as="image">
+	<link rel="preload" href="https://cdn.converteai.net/7ee76c7b-b701-481f-b973-2b478faae041/679a860d63a85e3ab900a295/main.m3u8" as="fetch">
+	<link rel="dns-prefetch" href="https://cdn.converteai.net">
+	<link rel="dns-prefetch" href="https://scripts.converteai.net">
+	<link rel="dns-prefetch" href="https://images.converteai.net">
+	<link rel="dns-prefetch" href="https://api.vturb.com.br">
+	
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script>
+        function getCurrentDate() {
+            const today = new Date();
+            const day = String(today.getDate()).padStart(2, '0');
+            const month = String(today.getMonth() + 1).padStart(2, '0');
+            const year = today.getFullYear();
+            return `${month}/${day}/${year}`;
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('dynamic-date').textContent = getCurrentDate();
+        });
+    </script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+
+        .top-bar {
+            background-color: #e67700;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .video-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .sound-notice {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            font-size: 16px;
+            margin-bottom: 40px;
+        }
+        .sound-notice i {
+            margin-right: 10px;
+        }
+
+        .comments-container {
+            max-width: 800px;
+            margin: 30px auto;
+            background-color: #F9FAFB;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .comments-header {
+            font-size: 14px;
+            color: #6C757D;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .comment {
+            display: flex;
+            align-items: flex-start;
+            padding: 15px 0;
+            border-bottom: 1px solid #E5E7EB;
+        }
+
+        .comment:last-child {
+            border-bottom: none;
+        }
+
+        .comment img {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
+        }
+
+        .comment-content {
+            flex: 1;
+        }
+
+        .comment-header {
+            font-weight: 600;
+            font-size: 14px;
+            color: #3A559F;
+            margin-bottom: 5px;
+        }
+
+        .comment-text {
+            font-size: 14px;
+            color: #6C757D;
+            margin-bottom: 10px;
+        }
+
+        .nested-comments {
+            border-left: 2px solid #E5E7EB;
+            padding-left: 10px;
+        }
+		
+		.loading-icon {
+			animation: spin 1s linear infinite;
+		}
+
+		@keyframes spin {
+			from {
+				transform: rotate(0deg);
+			}
+			to {
+				transform: rotate(360deg);
+			}
+		}
+		
+        .load-more-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            padding: 20px;
+        }
+
+        #loadMoreBtn {
+            background-color: #3A559F;
+            color: white;
+            font-weight: 600;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s;
+        }
+
+        #loadMoreBtn:hover {
+            background-color: #2d4373;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        This presentation will be available only until <span id="dynamic-date" class="underline-highlight"></span>
+    </div>
+
+    <div class="video-section">
+        <div id="vid_679a8633f1845b49a0cacc1c" style="position: relative; width: 100%; padding: 178.21782178217822% 0 0;"> <img id="thumb_679a8633f1845b49a0cacc1c" src="https://images.converteai.net/7ee76c7b-b701-481f-b973-2b478faae041/players/679a8633f1845b49a0cacc1c/thumbnail.jpg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block;" alt="thumbnail"> <div id="backdrop_679a8633f1845b49a0cacc1c" style=" -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px); position: absolute; top: 0; height: 100%; width: 100%; "></div> </div> <script type="text/javascript" id="scr_679a8633f1845b49a0cacc1c"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/7ee76c7b-b701-481f-b973-2b478faae041/players/679a8633f1845b49a0cacc1c/player.js", s.async=!0,document.head.appendChild(s); </script>
+    </div>
+
+    <div class="sound-notice">
+        <i class="bi bi-volume-up-fill"></i>
+        Make sure your sound is on
+    </div>
+
+    <div class="comments-container">
+        <div class="comments-header">12 of 1143 comments</div>
+		
+        <div class="comment">
+            <img src="images/user1.webp" alt="Wanpen Beckwith">
+            <div class="comment-content">
+                <div class="comment-header">Wanpen Beckwith</div>
+                <div class="comment-text">I’ve never been so happy to watch an interview all the way through! Thank you, Mark...</div>
+            </div>
+        </div>
+        
+        <div class="comment">
+            <img src="images/user2.webp" alt="Vilma Bawkin">
+            <div class="comment-content">
+                <div class="comment-header">Vilma Bawkin</div>
+                <div class="comment-text">This pepper trick helped my husband find relief from his nerve pain symptoms...</div>
+            </div>
+        </div>
+        
+        <div class="comment">
+            <img src="images/user3.webp" alt="Teresa King">
+            <div class="comment-content">
+                <div class="comment-header">Teresa King</div>
+                <div class="comment-text">I have a lot of discomfort and tingling in my shoulders and hands...</div>
+                <div class="nested-comments">
+                    <div class="comment">
+                        <img src="images/user4.webp" alt="Scott Melvin">
+                        <div class="comment-content">
+                            <div class="comment-header">Scott Melvin</div>
+                            <div class="comment-text">It really works! Can you believe it?</div>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <img src="images/user5.webp" alt="Lisa Miller">
+                        <div class="comment-content">
+                            <div class="comment-header">Lisa Miller</div>
+                            <div class="comment-text">Yes, it works! My mom tried this simple pepper trick...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="comment">
+            <img src="images/user6.webp" alt="Lori Marie">
+            <div class="comment-content">
+                <div class="comment-header">Lori Marie</div>
+                <div class="comment-text">My nerve pain has decreased significantly, and even the tingling and discomfort in my hands have disappeared...</div>
+            </div>
+        </div>
+        
+        <div class="comment">
+            <img src="images/user7.webp" alt="Amanda O'Malley">
+            <div class="comment-content">
+                <div class="comment-header">Amanda O'Malley</div>
+                <div class="comment-text">For me, the idea of relieving nerve pain without medication, especially with something like pepper, always seemed absurd...</div>
+            </div>
+        </div>
+        
+        <div class="comment">
+            <img src="images/user8.webp" alt="Andy Battoglia">
+            <div class="comment-content">
+                <div class="comment-header">Andy Battoglia</div>
+                <div class="comment-text">I don’t know… this might be a scam. What if I waste my time and it doesn’t work?</div>
+                <div class="nested-comments">
+                    <div class="comment">
+                        <img src="images/user9.webp" alt="Lucy Delane">
+                        <div class="comment-content">
+                            <div class="comment-header">Lucy Delane</div>
+                            <div class="comment-text">I thought the same thing, but it works. In just 15 days, my nerve pain went from unbearable to barely noticeable!</div>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <img src="images/user8.webp" alt="Andy Battoglia">
+                        <div class="comment-content">
+                            <div class="comment-header">Andy Battoglia</div>
+                            <div class="comment-text">Thanks so much for the comment, I’ll give it a try too then.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="comment">
+            <img src="images/user10.webp" alt="Melony Scharmen">
+            <div class="comment-content">
+                <div class="comment-header">Melony Scharmen</div>
+                <div class="comment-text">I’m truly amazed by this pepper trick for relieving nerve pain! I didn’t think it would really work, but I’ve been using it for 30 days, and guess what? It worked so well! I never want to rely on heavy medications again!</div>
+            </div>
+        </div>
+
+        <div class="comment">
+            <img src="images/user11.webp" alt="Stefanie Spear">
+            <div class="comment-content">
+                <div class="comment-header">Stefanie Spear</div>
+                <div class="comment-text">@joycelima this pepper thing I told you about worked for me.</div>
+            </div>
+        </div>
+		
+        <div class="load-more-container">
+            <button id="loadMoreBtn">
+                Load more comments
+            </button>
+        </div>
+
+    </div>
+	
+    <script>
+        const loadMoreBtn = document.getElementById('loadMoreBtn');
+        loadMoreBtn.addEventListener('click', () => {
+            loadMoreBtn.innerHTML = '<i class="fas fa-circle-notch fa-spin" style="margin-right: 8px;"></i>Loading...';
+        });
+    </script>
+
+</body>
+</html>
